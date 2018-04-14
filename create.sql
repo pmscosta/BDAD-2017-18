@@ -99,11 +99,11 @@ create table BookItem(
 	
 drop table if exists Sharing;
 create table Sharing(
-	id			integer PRIMARY KEY,
 	startDate	date not null,
 	endDate		date,
 	book		integer not null references Book on delete restrict on update cascade,
 	receives	integer not null references User on delete restrict on update cascade,
+	PRIMARY KEY(startDate, book, receives),
 	check(endDate >= startDate)
 );
 
