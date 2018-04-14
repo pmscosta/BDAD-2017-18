@@ -62,7 +62,7 @@ create table Author(
 drop table if exists AuthorNationality;
 create table AuthorNationality(
 	author	integer references Author not null,
-	nationality integer references Language not null,
+	nationality integer references Nationality not null,
 	PRIMARY KEY(author, nationality)
 );
 
