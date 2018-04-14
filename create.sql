@@ -6,70 +6,70 @@ PRAGMA foreign_keys=ON;
 
 drop table if exists Genre;
 CREATE TABLE Genre(
-	id 		integer PRIMARY KEY,
+	id 	integer PRIMARY KEY,
 	name 	text not null
 );
 
 drop table if exists Language;
 create table Language(
-	id 		integer PRIMARY KEY,
+	id 	integer PRIMARY KEY,
 	name	text not null
 );
 
 drop table if exists Publisher;
 create table Publisher(
-	id		integer PRIMARY KEY,
+	id	integer PRIMARY KEY,
 	name	text not null
 );
 
 drop table if exists Nationality;
 create table Nationality(
-	id		integer PRIMARY KEY,
+	id	integer PRIMARY KEY,
 	name	text not null
 );
 
 drop table if exists Book;
 create table Book(
-	id			integer PRIMARY KEY,
+	id		integer PRIMARY KEY,
 	ISBN		integer not null UNIQUE,
 	title		text not null,
 	year		integer not null,
 	edition		integer not null,
-	language	integer references Language not null,
-	publisher	integer references Publisher not null
+	language	integer not null references Language on delete restrict on update cascade,
+	publisher	integer not null references Publisher on delete restrict on update cascade 
 );
 
 drop table if exists BookGenre;
 create table BookGenre(
-	idBook		integer references Book not null,
-	idGenre 	integer references Genre not null,
+	idBook		integer not null references Book on delete restrict on update cascade, 
+	idGenre 	integer not null references Genre on delete restrict on update cascade, 
 	PRIMARY KEY(idBook, idGenre)
 );
 
 drop table if exists BookAuthor;
 create table BookAuthor(
-	idBook		integer references Book not null,
-	idAuthor 	integer references Author not null,
+	idBook		integer not null references Book on delete restrict on update cascade,
+	idAuthor 	integer not null references Author on delete restrict on update cascade,
 	PRIMARY KEY(idBook, idAuthor)
 );
 
 drop table if exists Author;
 create table Author(
-	id			integer PRIMARY KEY,
+	id		integer PRIMARY KEY,
 	name		text not null,
 	birthdate	date not null
 );
 
 drop table if exists AuthorNationality;
 create table AuthorNationality(
-	author		integer references Author not null,
-	nationality integer references Nationality not null,
+	author		integer not null references Author on delete restrict on update cascade,
+	nationality 	nteger not null references Nationality on delete restrict on update cascade,
 	PRIMARY KEY(author, nationality)
 );
 
 drop table if exists Location;
 create table Location(
-	id		integer PRIMARY KEY,
+	id	integer PRIMARY KEY,
 	pCode	integer not null UNIQUE,
 	name	text not null
 );
@@ -79,22 +79,22 @@ create table User(
 	id			integer PRIMARY KEY,
 	name		text not null,
 	address		text not null,
-	location	references Location not null
+	location	text not null references Location on delete restrict on update cascade
 );
 
 drop table if exists UserNationality;
 create table UserNationality(
-	user		integer references User not null,
-	nationality integer references Nationality not null,
+	user		integer not null references User on delete restrict on update cascade,
+	nationality 	integer not null references Nationality on delete restrict on update cascade,
 	PRIMARY KEY(user, nationality)
 );
 
 drop table if exists BookItem;
 create table BookItem(
-	id				integer PRIMARY KEY,
+	id		integer PRIMARY KEY,
 	insertionDate	date not null,
-	book			integer references Book not null,
-	owner			integer references User not null
+	book		integer not null references Book on delete restrict on update cascade,
+	owner		integer not null references User on delete restrict on update cascade
 );
 	
 drop table if exists Sharing;
@@ -102,8 +102,8 @@ create table Sharing(
 	id			integer PRIMARY KEY,
 	startDate	date not null,
 	endDate		date,
-	book		integer references Book not null,
-	receives	integer references User not null,
+	book		integer not null references Book on delete restrict on update cascade,
+	receives	integer not null references User on delete restrict on update cascade,
 	check(endDate >= startDate)
 );
 
@@ -113,7 +113,7 @@ create table Request(
 	bookTitle	text check(length(bookTitle) <= 40),
 	authorName	text check(length(authorName) <= 40),
 	isFulfilled	integer,
-	requester 	integer references User not null,
+	requester 	integer not null references User on delete cascade on update cascade,
 	check(bookTitle not null || authorName not null)
 );
 
@@ -122,7 +122,7 @@ create table Message(
 	id			integer PRIMARY KEY,
 	date		date not null,
 	body		text not null check(length(body) <= 500),
-	receives	integer references User not null,
-	senver		integer references User not null,
-	context		integer references BookItem not null
+	receives	integer not null references User on delete cascade on update cascade,
+	senver		integer not null references User on delete cascade on update cascade,
+	context		integer references BookItem on delete set null on update cascade
 );
