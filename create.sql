@@ -104,6 +104,7 @@ create table Sharing(
 	book		integer not null references Book on delete restrict on update cascade,
 	receives	integer not null references User on delete restrict on update cascade,
 	PRIMARY KEY(startDate, book, receives),
+	UNIQUE(endDate, book),
 	check(endDate >= startDate)
 );
 
