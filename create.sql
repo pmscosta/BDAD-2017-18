@@ -6,25 +6,25 @@ PRAGMA foreign_keys=ON;
 drop table if exists Genre;
 CREATE TABLE Genre(
 	id 	integer PRIMARY KEY,
-	name 	text not null
+	name 	text not null UNIQUE
 );
 
 drop table if exists Language;
 create table Language(
 	id 	integer PRIMARY KEY,
-	name	text not null
+	name	text not null UNIQUE
 );
 
 drop table if exists Publisher;
 create table Publisher(
 	id	integer PRIMARY KEY,
-	name	text not null
+	name	text not null UNIQUE
 );
 
 drop table if exists Nationality;
 create table Nationality(
 	id	integer PRIMARY KEY,
-	name	text not null
+	name	text not null UNIQUE
 );
 
 drop table if exists Book;
