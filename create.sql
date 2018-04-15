@@ -100,8 +100,8 @@ drop table if exists Sharing;
 create table Sharing(
 	startDate	date not null,
 	endDate		date,
-	book		integer not null references BookItem on delete restrict on update cascade,
-	receives	integer not null references User on delete restrict on update cascade,
+	book		integer not null references BookItem on delete cascade on update cascade,
+	receives	integer references User on delete set null on update cascade,
 	PRIMARY KEY(startDate, book, receives),
 	UNIQUE(endDate, book),
 	check(endDate >= startDate)
