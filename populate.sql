@@ -96,30 +96,30 @@ INSERT INTO Book VALUES(8, 9789722127974, 'Jesusalém', 2012, 13, 2, 2);
 INSERT INTO Book VALUES(9, 9780552160896, 'Angels and Demons', 2000, 14, 1, 3);  
 
 INSERT INTO BookItem VALUES(1, '2018/04/01', 1, 1);
-INSERT INTO BookItem VALUES(2, '2018/04/01', 2, 1);
-INSERT INTO BookItem VALUES(3, '2018/04/01', 3, 1);
-INSERT INTO BookItem VALUES(4, '2018/04/01', 4, 1);
-INSERT INTO BookItem VALUES(5, '2018/04/01', 5, 1);
-INSERT INTO BookItem VALUES(6, '2018/04/01', 6, 1);
-INSERT INTO BookItem VALUES(7, '2018/04/01', 7, 1);
-INSERT INTO BookItem VALUES(8, '2018/04/01', 8, 1);
-INSERT INTO BookItem VALUES(9, '2018/04/01', 9, 1);
+INSERT INTO BookItem VALUES(2, '2018/04/02', 2, 2);
+INSERT INTO BookItem VALUES(3, '2018/04/03', 3, 3);
+INSERT INTO BookItem VALUES(4, '2018/04/01', 4, 4);
+INSERT INTO BookItem VALUES(5, '2018/04/04', 5, 5);
+INSERT INTO BookItem VALUES(6, '2018/04/01', 6, 6);
+INSERT INTO BookItem VALUES(7, '2018/04/06', 7, 7);
+INSERT INTO BookItem VALUES(8, '2018/04/07', 8, 8);
+INSERT INTO BookItem VALUES(9, '2018/04/09', 9, 9);
 
 INSERT INTO BookGenre VALUES(1, 1);
-INSERT INTO BookGenre VALUES(2, 1);
-INSERT INTO BookGenre VALUES(3, 1);
-INSERT INTO BookGenre VALUES(4, 1);
+INSERT INTO BookGenre VALUES(2, 6);
+INSERT INTO BookGenre VALUES(3, 2);
+INSERT INTO BookGenre VALUES(4, 4);
 INSERT INTO BookGenre VALUES(5, 1);
-INSERT INTO BookGenre VALUES(6, 1);
+INSERT INTO BookGenre VALUES(6, 3);
 INSERT INTO BookGenre VALUES(7, 1);
 INSERT INTO BookGenre VALUES(8, 2);
 INSERT INTO BookGenre VALUES(9, 3);
 
 INSERT INTO BookAuthor VALUES(1, 1);
-INSERT INTO BookAuthor VALUES(2, 1);
+INSERT INTO BookAuthor VALUES(2, 2);
 INSERT INTO BookAuthor VALUES(3, 1);
-INSERT INTO BookAuthor VALUES(4, 1);
-INSERT INTO BookAuthor VALUES(5, 1);
+INSERT INTO BookAuthor VALUES(4, 3);
+INSERT INTO BookAuthor VALUES(5, 4);
 INSERT INTO BookAuthor VALUES(6, 1);
 INSERT INTO BookAuthor VALUES(7, 1);
 INSERT INTO BookAuthor VALUES(8, 2);
@@ -141,17 +141,17 @@ INSERT INTO Message VALUES(7, '2018/04/13','It is levi-o-sa, not leviosá', 7, 9,
 
 
 
-INSERT INTO Request VALUES(1, 'Os Maias', 'Eça de Queiroz', 0, 3);
+INSERT INTO Request VALUES(1, 'Os Maias', 'Eca de Queiroz', 0, 3);
 
-INSERT INTO Request VALUES(2, 'O crime do Padre Amaro',  'Eça de Queiroz', 0, 5);
+INSERT INTO Request VALUES(2, 'O crime do Padre Amaro',  'Eca de Queiroz', 0, 5);
 
 INSERT INTO Request VALUES(3, 'Viagens na minha terra', 'Almeira Garret', 0, 7);
 
-INSERT INTO Request VALUES(4, 'A ilustre casa de Ramires', 'Eça de Queiroz', 0, 5);
+INSERT INTO Request VALUES(4, 'A ilustre casa de Ramires', 'Eca de Queiroz', 0, 5);
 
-INSERT INTO Request VALUES(5, 'O Homem Duplicado', 'José Saramago', 0, 2);
+INSERT INTO Request VALUES(5, 'O Homem Duplicado', 'Jose Saramago', 0, 2);
 
-INSERT INTO Request VALUES(6, 'Ensaio sobre a Cegueira', 'José Saramago', 0, 2);
+INSERT INTO Request VALUES(6, 'Ensaio sobre a Cegueira', 'Jose Saramago', 0, 2);
 
 INSERT INTO Request VALUES(7, 'A Casa Grande de Romarigães', 'Aquilino Ribeiro', 0, 3);
 
