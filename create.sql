@@ -1,7 +1,6 @@
 PRAGMA foreign_keys=ON;
 .mode columns
 .headers on
-.nullvalue NULL
 
 
 drop table if exists Genre;
@@ -76,7 +75,7 @@ create table Location(
 
 drop table if exists User;
 create table User(
-	id			integer PRIMARY KEY,
+	id		integer PRIMARY KEY,
 	name		text not null,
 	address		text not null,
 	location	text not null references Location on delete restrict on update cascade
@@ -94,14 +93,14 @@ create table BookItem(
 	id		integer PRIMARY KEY,
 	insertionDate	date not null,
 	book		integer not null references Book on delete restrict on update cascade,
-	owner		integer not null references User on delete restrict on update cascade
+	owner		integer not null references User on delete cascade on update cascade
 );
 	
 drop table if exists Sharing;
 create table Sharing(
 	startDate	date not null,
 	endDate		date,
-	book		integer not null references Book on delete restrict on update cascade,
+	book		integer not null references BookItem on delete restrict on update cascade,
 	receives	integer not null references User on delete restrict on update cascade,
 	PRIMARY KEY(startDate, book, receives),
 	UNIQUE(endDate, book),
@@ -110,20 +109,20 @@ create table Sharing(
 
 drop table if exists Request;
 create table Request(
-	id			integer PRIMARY KEY,
+	id		integer PRIMARY KEY,
 	bookTitle	text check(length(bookTitle) <= 40),
 	authorName	text check(length(authorName) <= 40),
-	isFulfilled	integer,
+	isFulfilled	integer DEFAULT 0, 
 	requester 	integer not null references User on delete cascade on update cascade,
-	check(bookTitle not null || authorName not null)
+	check(bookTitle is not null or authorName is not null)
 );
 
 drop table if exists Message;
 create table Message(
-	id			integer PRIMARY KEY,
+	id		integer PRIMARY KEY,
 	date		date not null,
 	body		text not null check(length(body) <= 500),
 	receives	integer not null references User on delete cascade on update cascade,
-	senver		integer not null references User on delete cascade on update cascade,
-	context		integer references BookItem on delete set null on update cascade
+	sender		integer not null references User on delete cascade on update cascade,
+	context		integer references BookItem on delete cascade on update cascade
 );
