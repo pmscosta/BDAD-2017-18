@@ -37,7 +37,7 @@ INSERT INTO Genre VALUES (6, 'Sci-Fi');
 INSERT INTO Author VALUES(1, 'J. K. Rowling', '1965/07/31');
 INSERT INTO Author VALUES(2, 'Mia Couto', '1955/07/05');
 INSERT INTO Author VALUES(3, 'Dan Brown', '1964/06/22');
-INSERT INTO Author VALUES(4, 'Sophia de Mello Breyner', 
+INSERT INTO Author VALUES(4, 'Sophia de Mello Breyner', '1963/02/12');
 
 INSERT INTO Location VALUES(1, 4470111, 'Maia');
 INSERT INTO Location VALUES(2, 74120, 'Ban Phaeo');
@@ -147,7 +147,7 @@ INSERT INTO Request VALUES(2, 'O crime do Padre Amaro',  'Eça de Queiroz', 0, 5)
 
 INSERT INTO Request VALUES(3, 'Viagens na minha terra', 'Almeira Garret', 0, 7);
 
-INSERT INTO Request VALUES(4, 'A ilustre casa de Ramires', "Eça de Queiroz', 0, 5);
+INSERT INTO Request VALUES(4, 'A ilustre casa de Ramires', 'Eça de Queiroz', 0, 5);
 
 INSERT INTO Request VALUES(5, 'O Homem Duplicado', 'José Saramago', 0, 2);
 
