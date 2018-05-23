@@ -92,6 +92,7 @@ drop table if exists BookItem;
 create table BookItem(
 	id		integer PRIMARY KEY,
 	insertionDate	date not null,
+	numShares	integer not null DEFAULT 0,
 	book		integer not null references Book on delete restrict,
 	owner		integer not null references User on delete cascade
 );
@@ -101,8 +102,9 @@ create table Sharing(
 	startDate	date not null,
 	endDate		date,
 	book		integer not null references BookItem on delete cascade,
-	receives	integer references User on delete set null,
-	PRIMARY KEY(startDate, book, receives),
+	receiver	integer references User on delete set null,
+	sender		integer references User on delete set null,
+	PRIMARY KEY(startDate, book, receiver),
 	UNIQUE(endDate, book),
 	check(endDate >= startDate)
 );
@@ -122,7 +124,7 @@ create table Message(
 	id		integer PRIMARY KEY,
 	date		date not null,
 	body		text not null check(length(body) <= 500),
-	receives	integer not null references User on delete cascade,
+	receiver	integer not null references User on delete cascade,
 	sender		integer not null references User on delete cascade,
 	context		integer references BookItem on delete cascade
 );
