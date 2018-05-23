@@ -1,0 +1,10 @@
+Tempo Médio de Empréstimo - select avg(totalTime) from (select julianday(endDate) -julianday( startDate) as totalTime from sharing group by book);
+
+Ranking de user mais ativos - select User.name, count(*) as shares from user, sharing where sharing.sender = user.id group by sender order by shares desc limit 3;
+
+
+/** WORKING ON IT **/
+Livros recomendados - create view userAuthor as
+  			select author.name  from sharing, user, bookItem, bookAuthor, book, author where sharing.receiver = user.id and bookItem.id = sharing.book and bookItem.book = Book.id and bookAuthor.idBook = Book.id and author.id = bookAuthor.idauthor and sharing.receiver = 3;
+
+

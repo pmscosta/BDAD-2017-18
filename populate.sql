@@ -124,10 +124,10 @@ INSERT INTO Request VALUES(5, 'O Homem Duplicado', 'Jose Saramago', 0, 2);
 INSERT INTO Request VALUES(6, 'Ensaio sobre a Cegueira', 'Jose Saramago', 0, 2);
 INSERT INTO Request VALUES(7, 'A Casa Grande de Romarigães', 'Aquilino Ribeiro', 0, 3);
 
-INSERT INTO Sharing VALUES('2018/04/13', '2018/04/13', 1, 2, null);
-INSERT INTO Sharing VALUES('2018/04/13', '2018/04/13', 2, 3, null);
-INSERT INTO Sharing VALUES('2018/04/14', '2018/04/15', 3, 4, null);
-INSERT INTO Sharing VALUES('2018/04/13', '2018/04/13', 4, 5, null);
-INSERT INTO Sharing VALUES('2018/04/14', '2018/04/14', 5, 6, null);
-INSERT INTO Sharing VALUES('2018/04/15', '2018/04/15', 9, 1, null);
-INSERT INTO Sharing VALUES('2018/06/18', '2018/06/25', 1, 1, null);
+INSERT INTO Sharing VALUES('2018-04-13', '2018-04-13', 1, 2, null);
+INSERT INTO Sharing VALUES('2018-04-13', '2018-04-13', 2, 3, null);
+INSERT INTO Sharing VALUES('2018-04-14', '2018-04-15', 3, 4, null);
+INSERT INTO Sharing VALUES('2018-04-13', '2018-04-13', 4, 5, null);
+INSERT INTO Sharing VALUES('2018-04-14', '2018-04-14', 5, 6, null);
+INSERT INTO Sharing VALUES('2018-04-15', '2018-04-15', 9, 1, null);
+INSERT INTO Sharing VALUES('2018-06-18', '2018-06-25', 1, 1, null);
