@@ -21,25 +21,27 @@ INSERT INTO Publisher VALUES(3, 'Corgi Books');
 INSERT INTO Genre VALUES(1, 'Fantasy');
 INSERT INTO Genre VALUES(2, 'Romance');
 INSERT INTO Genre VALUES(3, 'Thriller');
-INSERT INTO Genre VALUES (4, 'Drama');
-INSERT INTO Genre VALUES (5, 'Crime');
-INSERT INTO Genre VALUES (6, 'Sci-Fi');
+INSERT INTO Genre VALUES(4, 'Drama');
+INSERT INTO Genre VALUES(5, 'Crime');
+INSERT INTO Genre VALUES(6, 'Sci-Fi');
 
-INSERT INTO Author VALUES(1, 'J. K. Rowling', '1965/07/31');
-INSERT INTO Author VALUES(2, 'Mia Couto', '1955/07/05');
-INSERT INTO Author VALUES(3, 'Dan Brown', '1964/06/22');
-INSERT INTO Author VALUES(4, 'Sophia de Mello Breyner', '1963/02/12');
+INSERT INTO Author VALUES(1, 'J. K. Rowling', '1965-07-31');
+INSERT INTO Author VALUES(2, 'Mia Couto', '1955-07-05');
+INSERT INTO Author VALUES(3, 'Dan Brown', '1964-06-22');
+INSERT INTO Author VALUES(4, 'Sophia de Mello Breyner', '1963-02-12');
+INSERT INTO Author VALUES(5, 'Afonso Cruz', '1980-05-13');
+
 
 INSERT INTO Location VALUES(1, 4470111, 'Maia');
 INSERT INTO Location VALUES(2, 74120, 'Ban Phaeo');
 INSERT INTO Location VALUES(3, 95000, 'Yala');
-
 INSERT INTO Location VALUES(4, 2080381, 'Cortiçóis');
 INSERT INTO Location VALUES(5, 66540, 'Stare Kurowo');
 INSERT INTO Location VALUES(6, 37, 'Athlone');
 INSERT INTO Location VALUES(7, 25187, 'Helsingborg');
 INSERT INTO Location VALUES(8, 3501213, 'Takahagi');
 INSERT INTO Location VALUES(9, 13461, 'Ingarö');
+INSERT INTO Location VALUES(10, 5382, 'Porto');
 
 INSERT INTO User VALUES(1, 'Margarida Silva', 'Avenida Rosal', 1);
 INSERT INTO User VALUES(2, 'Zsa zsa Ruddock', '58 Thierer Pass', 2);
@@ -51,6 +53,7 @@ INSERT INTO User VALUES(7, 'Florentia Kelledy', '2 Towne Crossing', 7);
 INSERT INTO User VALUES(8, 'Yettie O''Hdirscoll', '15 Stang Avenue', 7);
 INSERT INTO User VALUES(9, 'Dorita Kivlin', '39 Manufacturers Alley', 8);
 INSERT INTO User VALUES(10, 'Jeniece Smithyman', '00006 Mosinee Way', 9);
+INSERT INTO User VALUES(11, 'Pedro Costa', '4200 Bonfim', 10);
 
 INSERT INTO Nationality VALUES(1, 'Portuguese');
 INSERT INTO Nationality VALUES(2, 'British');
@@ -76,7 +79,8 @@ INSERT INTO Book VALUES(5, 9780439358064, 'Harry Potter and the Order of the Pho
 INSERT INTO Book VALUES(6, 9780439784542, 'Harry Potter and the Half-Blood Prince', 2005, 1, 1, 1);
 INSERT INTO Book VALUES(7, 9780747591054, 'Harry Potter and the Deathly Hallows', 2007, 1, 1, 1);
 INSERT INTO Book VALUES(8, 9789722127974, 'Jesusalém', 2012, 13, 2, 2);
-INSERT INTO Book VALUES(9, 9780552160896, 'Angels and Demons', 2000, 14, 1, 3);  
+INSERT INTO Book VALUES(9, 9780552160896, 'Angels and Demons', 2000, 14, 1, 3);
+INSERT INTO Book VALUES(10,9780552123196, 'O Pintor debaixo do lava-loiças', 2005, 4, 2, 3);
 
 INSERT INTO BookItem (id, insertionDate, book, owner) VALUES(1, '2018/04/01', 1, 1);
 INSERT INTO BookItem (id, insertionDate, book, owner) VALUES(2, '2018/04/02', 2, 2);
@@ -87,6 +91,7 @@ INSERT INTO BookItem (id, insertionDate, book, owner) VALUES(6, '2018/04/01', 6,
 INSERT INTO BookItem (id, insertionDate, book, owner) VALUES(7, '2018/04/06', 7, 7);
 INSERT INTO BookItem (id, insertionDate, book, owner) VALUES(8, '2018/04/07', 8, 8);
 INSERT INTO BookItem (id, insertionDate, book, owner) VALUES(9, '2018/04/09', 9, 9);
+INSERT INTO BookItem (id, insertionDate, book, owner) VALUES(10, '2018/03/20', 10, 11);
 
 INSERT INTO BookGenre VALUES(1, 1);
 INSERT INTO BookGenre VALUES(2, 6);
@@ -97,6 +102,7 @@ INSERT INTO BookGenre VALUES(6, 3);
 INSERT INTO BookGenre VALUES(7, 1);
 INSERT INTO BookGenre VALUES(8, 2);
 INSERT INTO BookGenre VALUES(9, 3);
+INSERT INTO BookGenre VALUES(10, 2);
 
 INSERT INTO BookAuthor VALUES(1, 1);
 INSERT INTO BookAuthor VALUES(2, 2);
@@ -107,6 +113,7 @@ INSERT INTO BookAuthor VALUES(6, 1);
 INSERT INTO BookAuthor VALUES(7, 1);
 INSERT INTO BookAuthor VALUES(8, 2);
 INSERT INTO BookAuthor VALUES(9, 3);
+INSERT INTO BookAuthor VALUES(10, 5);
 
 INSERT INTO Message VALUES(1, '2018/04/10','Hey, how are you?', 1, 2, 2);
 INSERT INTO Message VALUES(2, '2018/04/10','Good, and you?', 2, 1, 2);
