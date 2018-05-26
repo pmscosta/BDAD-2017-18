@@ -115,14 +115,14 @@ INSERT INTO BookAuthor VALUES(8, 2);
 INSERT INTO BookAuthor VALUES(9, 3);
 INSERT INTO BookAuthor VALUES(10, 5);
 
-INSERT INTO Message VALUES(1, '2018/04/10 10:05:34','Hey, how are you?', 1, 2, 2);
-INSERT INTO Message VALUES(2, '2018/04/10 12:30:54','Good, and you?', 2, 1, 2);
-INSERT INTO Message VALUES(3, '2018/04/10 12:40:03','I am fine, thank you. About the book, can you meet me downton?', 1, 2, 1);
-INSERT INTO Message VALUES(4, '2018/04/10 12:50:32','Yeah, no problem. What time?', 2, 1, 2);
-INSERT INTO Message VALUES(5, '2018/04/10 13:15:02','Around 2 p.m, is that fine for you?', 1, 2, 2);
-INSERT INTO Message VALUES(6, '2018/04/12 19:20:04','Hey, excellent book, did you enjoy reading it?', 3, 4, 4);
-INSERT INTO Message VALUES(7, '2018/04/12 23:25:04','No, was expecting a bit more, to be honest!', 4, 3, 4);
-INSERT INTO Message VALUES(8, '2018/04/13 20:23:03','It is levi-o-sa, not leviosá', 7, 9, 9);
+INSERT INTO Message VALUES(1, '2018-04-10 10:05:34','Hey, how are you?', 1, 2, 2);
+INSERT INTO Message VALUES(2, '2018-04-10 12:30:54','Good, and you?', 2, 1, 2);
+INSERT INTO Message VALUES(3, '2018-04-10 12:40:03','I am fine, thank you. About the book, can you meet me downton?', 1, 2, 1);
+INSERT INTO Message VALUES(4, '2018-04-10 12:50:32','Yeah, no problem. What time?', 2, 1, 2);
+INSERT INTO Message VALUES(5, '2018-04-10 13:15:02','Around 2 p.m, is that fine for you?', 1, 2, 2);
+INSERT INTO Message VALUES(6, '2018-04-12 19:20:04','Hey, excellent book, did you enjoy reading it?', 3, 4, 4);
+INSERT INTO Message VALUES(7, '2018-04-12 23:25:04','No, was expecting a bit more, to be honest!', 4, 3, 4);
+INSERT INTO Message VALUES(8, '2018-04-13 20:23:03','It is levi-o-sa, not leviosá', 7, 9, 9);
 
 INSERT INTO Request VALUES(1, 'Os Maias', 'Eca de Queiroz', 0, 3);
 INSERT INTO Request VALUES(2, 'O crime do Padre Amaro',  'Eca de Queiroz', 0, 5);
