@@ -16,7 +16,7 @@ create view userAuthor as
 	      and author.id = bookAuthor.idauthor 
 	      and sharing.receiver = 3;
 
-select author.name as Author, book.title as Title
+select distinct author.name as Author, book.title as Title
 from userAuthor, book, bookAuthor, author
 where userAuthor.id = author.id 
       and bookAuthor.idAuthor = userAuthor.id

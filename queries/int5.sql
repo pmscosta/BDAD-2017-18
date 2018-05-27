@@ -20,4 +20,5 @@ create view userAuthor as
 
 select userAuthor.name as FavoriteAuthors
 	from userAuthor, (select max(numOccurences) as maxOccurence from userAuthor)
-	where userAuthor.numOccurences >= maxOccurence;
+	where userAuthor.numOccurences >= maxOccurence
+	order by userAuthor.numOccurences desc;
