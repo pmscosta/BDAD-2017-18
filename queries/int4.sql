@@ -7,7 +7,7 @@ drop view if exists userAuthor;
 --Livros recomendados
 
 create view userAuthor as
- 	select user.name, author.name, author.id 
+ 	select distinct user.name, author.name, author.id, book.title 
 	from sharing, user, bookItem, bookAuthor, book, author 
 	where sharing.receiver = user.id 
 	      and bookItem.id = sharing.book
@@ -21,4 +21,5 @@ from userAuthor, book, bookAuthor, author
 where userAuthor.id = author.id 
       and bookAuthor.idAuthor = userAuthor.id
       and book.id = bookAuthor.idBook
-      limit 4;
+      and book.title <> userAuthor.title
+      LIMIT 7;

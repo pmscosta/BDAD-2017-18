@@ -94,6 +94,7 @@ INSERT INTO Book VALUES(8, 9789722127974, 'Jesusalém', 2012, 13, 2, 2);
 INSERT INTO Book VALUES(9, 9780552160896, 'Angels and Demons', 2000, 14, 1, 3);
 INSERT INTO Book VALUES(10,9780552123196, 'O Pintor debaixo do lava-loiças', 2005, 4, 2, 3);
 INSERT INTO Book VALUES(11,9780420123196, 'Fifty Shades of Grey', 2011, 4, 1, 4);
+INSERT INTO Book VALUES(12,9780420142096, 'A Confissao da Leoa', 2012, 5, 2, 2);
 
 INSERT INTO BookItem (id, insertionDate, book, owner) VALUES(1, '2018/04/01', 1, 1);
 INSERT INTO BookItem (id, insertionDate, book, owner) VALUES(2, '2018/04/02', 2, 2);
@@ -106,6 +107,7 @@ INSERT INTO BookItem (id, insertionDate, book, owner) VALUES(8, '2018/04/07', 8,
 INSERT INTO BookItem (id, insertionDate, book, owner) VALUES(9, '2018/04/09', 9, 9);
 INSERT INTO BookItem (id, insertionDate, book, owner) VALUES(10, '2018/03/20', 10, 11);
 INSERT INTO BookItem (id, insertionDate, book, owner) VALUES(11, '2018/09/20', 11, 2);
+INSERT INTO BookItem (id, insertionDate, book, owner) VALUES(12, '2018/09/25', 12, 6);
 
 INSERT INTO BookGenre VALUES(1, 1);
 INSERT INTO BookGenre VALUES(2, 6);
@@ -118,18 +120,20 @@ INSERT INTO BookGenre VALUES(8, 2);
 INSERT INTO BookGenre VALUES(9, 3);
 INSERT INTO BookGenre VALUES(10, 2);
 INSERT INTO BookGenre VALUES(11, 7);
+INSERT INTO BookGenre VALUES(12, 2);
 
 INSERT INTO BookAuthor VALUES(1, 1);
-INSERT INTO BookAuthor VALUES(2, 2);
+INSERT INTO BookAuthor VALUES(2, 1);
 INSERT INTO BookAuthor VALUES(3, 1);
-INSERT INTO BookAuthor VALUES(4, 3);
-INSERT INTO BookAuthor VALUES(5, 4);
+INSERT INTO BookAuthor VALUES(4, 1);
+INSERT INTO BookAuthor VALUES(5, 1);
 INSERT INTO BookAuthor VALUES(6, 1);
 INSERT INTO BookAuthor VALUES(7, 1);
 INSERT INTO BookAuthor VALUES(8, 2);
 INSERT INTO BookAuthor VALUES(9, 3);
 INSERT INTO BookAuthor VALUES(10, 5);
 INSERT INTO BookAuthor VALUES(11, 6);
+INSERT INTO BookAuthor VALUES(12, 2);
 
 INSERT INTO Message VALUES(1, '2018-04-10 10:05:34','Hey, how are you?', 1, 2, 2);
 INSERT INTO Message VALUES(2, '2018-04-10 12:30:54','Good, and you?', 2, 1, 2);
@@ -160,6 +164,7 @@ INSERT INTO Sharing VALUES('2018-04-15', '2018-04-15', 9, 1, null);
 INSERT INTO Sharing VALUES('2018-06-18', '2018-06-25', 1, 1, null); 
 INSERT INTO Sharing VALUES('2018-10-05', '2018-10-30', 11, 3, null);
 INSERT INTO Sharing VALUES('2018-11-05', '2018-11-20', 11, 5, null);
+INSERT INTO Sharing VALUES('2018-12-04', '2018-12-25', 8, 3, null);
 
 --Still ongoing sharings, without endDate aka unavailableBooks
 
