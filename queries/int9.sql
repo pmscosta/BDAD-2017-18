@@ -13,5 +13,8 @@ from
 		where S.book = BI.id and BI.book = BA.idBook)
 		group by idAuthor), Author A
 	where idAuthor = A.id
-order by cnt
+order by cnt desc
 LIMIT 3;
+
+
+
