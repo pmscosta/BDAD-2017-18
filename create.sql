@@ -126,5 +126,6 @@ create table Message(
 	body		text not null check(length(body) <= 500),
 	receiver	integer not null references User on delete cascade,
 	sender		integer not null references User on delete cascade,
-	context		integer references BookItem on delete cascade
+	context		integer references BookItem on delete cascade,
+	check(receiver <> sender)
 );
