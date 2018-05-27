@@ -1,3 +1,5 @@
+PRAGMA foreign_keys=ON;
+
 CREATE TRIGGER insertSharing
 AFTER INSERT ON Message
 WHEN New.body LIKE '[Share][Complete]'

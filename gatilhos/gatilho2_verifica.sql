@@ -1,3 +1,5 @@
+PRAGMA foreign_keys=ON;
+
 SELECT * FROM MESSAGE;
 
 INSERT INTO MESSAGE VALUES (8, '2018/06/20', 'Hello, nice book you have!', 4, 3, 2);

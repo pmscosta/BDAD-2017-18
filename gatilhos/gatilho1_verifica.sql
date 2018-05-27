@@ -1,3 +1,5 @@
+PRAGMA foreign_keys=ON;
+
 SELECT * FROM SHARING WHERE book = 1;
 SELECT * FROM BOOKITEM WHERE id = 1; 
 

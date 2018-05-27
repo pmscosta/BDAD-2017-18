@@ -1,3 +1,5 @@
+PRAGMA foreign_keys=ON;
+
 CREATE TRIGGER validateSharing
 AFTER INSERT ON sharing
 BEGIN
