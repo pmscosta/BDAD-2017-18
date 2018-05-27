@@ -4,6 +4,13 @@
 
 --Livros Disponíveis
 
-select book.title as AvailableBooks from bookItem, book
-	where bookItem.id not in (select book from sharing where endDate is null)
-	      and bookItem.book = book.id;
+select book.title
+from 
+	(select book as idBook
+	from bookItem
+	except
+	select bookItem.book as idBook
+	from sharing, bookItem
+	where endDate is null and sharing.book = bookItem.id
+	), book
+where idBook = book.id;
