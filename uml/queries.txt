@@ -1,0 +1,28 @@
+﻿1) Devolve o tempo médio de um empréstimo. Por tempo, entenda-se o intervalo entre a troca física do livro e a nova colocação do livro na base de dados após a leitura de quem o recebeu.
+
+
+2) Lista os utilizadores mais ativos da aplicação. Um utilizador considera-se ativo quando partilhou vários livros na rede. 
+
+
+3) Relaciona pessoas com outras pessoas com gostos literários similares. No nosso caso, consideramos 2 pessoas com gostos similares se tiverem lido pelo menos 2 livros de género literários iguais. 
+
+
+4) Recomenda alguns livros a um user baseado nos autores que este já leu previamente. (-->talvez aqui fazer uma referência ao facto de apenas ligarmos apenas às partilhas e não ao owner; talvez explicar isso numa seccção antes de introduzir as queries)
+
+
+5) Mostra os autores favoritos de um utilizador, baseado em quantos livros já leu dele/a.
+
+
+6) Número de utilizadores por localização.
+
+
+7) Mostra todos os livros disponíveis para partilha na aplicação. Por livro disponível entende-se todo aquele que não está numa sharing ativa (data final ainda por definir).
+
+
+8) Lista, por ordem, os utilizadores mais responsivos às mensagens.
+
+
+9) Lista os 3 autores favoritos de todos os utilizadores da aplicação.
+
+
+10) Lista os request que já foram cumpridos e quem partilhou o livro pretendido.
