@@ -158,10 +158,13 @@ INSERT INTO Sharing VALUES('2018-04-13', '2018-04-13', 4, 5, null);
 INSERT INTO Sharing VALUES('2018-04-14', '2018-04-14', 5, 6, null);
 INSERT INTO Sharing VALUES('2018-04-15', '2018-04-15', 9, 1, null);
 INSERT INTO Sharing VALUES('2018-06-18', '2018-06-25', 1, 1, null); 
+INSERT INTO Sharing VALUES('2018-10-05', '2018-10-30', 11, 3, null);
+INSERT INTO Sharing VALUES('2018-11-05', '2018-11-20', 11, 5, null);
 
 --Still ongoing sharings, without endDate aka unavailableBooks
 
 INSERT INTO Sharing VALUES('2018-07-14', null, 5, 7, null);
 INSERT INTO Sharing VALUES('2018-08-15', null, 1, 5, null);
 INSERT INTO Sharing VALUES('2018-06-18', null, 3, 9, null);
-INSERT INTO Sharing VALUES('2018-10-05', null, 11, 11, null);
+INSERT INTO Sharing VALUES('2018-12-01', null, 11, 3, null);
+
